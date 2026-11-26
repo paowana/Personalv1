@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แดชบอร์ดสุขภาพส่วนตัว | 9–15 พ.ย.</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#6b7588;--line:#e8edf4;--blue:#4778e8;--teal:#16a6a1;--purple:#8b6be8;--green:#1d9b70}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:34px 22px 48px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:26px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+h1{font-size:clamp(25px,4vw,34px);margin:6px 0 5px}
+.sub{color:var(--muted);font-size:14px}
+.badge{background:#eaf0ff;color:#315fc9;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:650;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 5px 18px rgba(25,45,85,.035)}
+.kpi-label{color:var(--muted);font-size:13px;display:flex;align-items:center;gap:8px}
+.icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-size:16px}
+.kpi-value{font-size:30px;font-weight:750;letter-spacing:-.04em;margin:13px 0 2px}
+.kpi-note{font-size:12px;color:var(--muted)}
+.section-title{font-size:18px;margin:0 0 4px}
+.section-sub{font-size:13px;color:var(--muted);margin:0 0 18px}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.chart-card{padding:21px 20px 16px}
+.legend{display:flex;gap:15px;font-size:12px;color:var(--muted);margin:0 0 6px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+svg{width:100%;height:auto;display:block;overflow:visible}
+.axis{font-size:10px;fill:#8791a3}
+.gridline{stroke:#edf1f6;stroke-width:1}
+.line{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.point{stroke:#fff;stroke-width:2}
+.daily{padding:21px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;color:var(--muted);font-weight:600;font-size:12px;padding:12px 10px;border-bottom:1px solid var(--line)}
+td{padding:13px 10px;border-bottom:1px solid #f0f3f7}
+tr:last-child td{border-bottom:0}
+.day{font-weight:650;white-space:nowrap}
+.activity{display:inline-block;padding:5px 9px;border-radius:8px;background:#eef4ff;color:#3c66c4;font-size:12px;font-weight:600}
+.rest{background:#f1f3f6;color:#697386}
+.footer{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}.badge{white-space:normal}}
+@media(max-width:480px){.wrap{padding:24px 14px}.card{padding:16px}.kpi-value{font-size:26px}table{font-size:12px}th,td{padding:11px 5px}.activity{font-size:11px;padding:4px 6px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div><div class="eyebrow">Personal wellness dashboard</div><h1>แดชบอร์ดสุขภาพส่วนตัว</h1><div class="sub">สรุปกิจกรรมประจำวันที่ 9–15 พฤศจิกายน · น้ำหนักที่บันทึก: 49 กก.</div></div>
+  <div class="badge">ภาพรวม 7 วัน</div>
+</header>
+
+<section class="grid" aria-label="ตัวชี้วัดสุขภาพ">
+  <article class="card"><div class="kpi-label"><span class="icon" style="background:#edf2ff">🏃</span>วันออกกำลังกาย</div><div class="kpi-value">4 <span style="font-size:15px;font-weight:600;color:#778196">/ 7 วัน</span></div><div class="kpi-note">วิ่ง 2 วัน · ปั่นจักรยาน 2 วัน</div></article>
+  <article class="card"><div class="kpi-label"><span class="icon" style="background:#e8f8f5">⏱️</span>เวลาออกกำลังกายรวม</div><div class="kpi-value">135 <span style="font-size:15px;font-weight:600;color:#778196">นาที</span></div><div class="kpi-note">เฉลี่ย 33.8 นาทีต่อวันที่ออกกำลัง</div></article>
+  <article class="card"><div class="kpi-label"><span class="icon" style="background:#f2edff">🌙</span>ชั่วโมงนอนเฉลี่ย</div><div class="kpi-value">7.4 <span style="font-size:15px;font-weight:600;color:#778196">ชม./คืน</span></div><div class="kpi-note">รวม 51.6 ชั่วโมงใน 7 วัน</div></article>
+  <article class="card"><div class="kpi-label"><span class="icon" style="background:#eaf6ff">💧</span>น้ำดื่มเฉลี่ย</div><div class="kpi-value">2.2 <span style="font-size:15px;font-weight:600;color:#778196">ลิตร/วัน</span></div><div class="kpi-note">รวม 15.4 ลิตรใน 7 วัน</div></article>
+</section>
+
+<section class="charts">
+  <article class="card chart-card">
+    <h2 class="section-title">แนวโน้มการนอน</h2><p class="section-sub">ชั่วโมงนอนในแต่ละวัน</p>
+    <div class="legend"><span><i class="dot" style="background:var(--purple)"></i>ชั่วโมงนอน</span></div>
+    <svg viewBox="0 0 480 220" role="img" aria-label="กราฟแนวโน้มชั่วโมงนอน 7 วัน">
+      <line class="gridline" x1="42" y1="30" x2="462" y2="30"/><line class="gridline" x1="42" y1="75" x2="462" y2="75"/><line class="gridline" x1="42" y1="120" x2="462" y2="120"/><line class="gridline" x1="42" y1="165" x2="462" y2="165"/>
+      <text class="axis" x="7" y="34">9 ชม.</text><text class="axis" x="7" y="79">8 ชม.</text><text class="axis" x="7" y="124">7 ชม.</text><text class="axis" x="7" y="169">6 ชม.</text>
+      <polyline class="line" stroke="#8b6be8" points="52,111 119,143 186,111 253,52 320,143 387,52 454,111"/>
+      <g fill="#8b6be8"><circle class="point" cx="52" cy="111" r="5"/><circle class="point" cx="119" cy="143" r="5"/><circle class="point" cx="186" cy="111" r="5"/><circle class="point" cx="253" cy="52" r="5"/><circle class="point" cx="320" cy="143" r="5"/><circle class="point" cx="387" cy="52" r="5"/><circle class="point" cx="454" cy="111" r="5"/></g>
+      <g class="axis" text-anchor="middle"><text x="52" y="195">9 พ.ย.</text><text x="119" y="195">10 พ.ย.</text><text x="186" y="195">11 พ.ย.</text><text x="253" y="195">12 พ.ย.</text><text x="320" y="195">13 พ.ย.</text><text x="387" y="195">14 พ.ย.</text><text x="454" y="195">15 พ.ย.</text></g>
+    </svg>
+  </article>
+  <article class="card chart-card">
+    <h2 class="section-title">แนวโน้มการดื่มน้ำ</h2><p class="section-sub">ปริมาณน้ำดื่มในแต่ละวัน</p>
+    <div class="legend"><span><i class="dot" style="background:var(--teal)"></i>ปริมาณน้ำ (ลิตร)</span></div>
+    <svg viewBox="0 0 480 220" role="img" aria-label="กราฟแนวโน้มปริมาณน้ำดื่ม 7 วัน">
+      <line class="gridline" x1="42" y1="30" x2="462" y2="30"/><line class="gridline" x1="42" y1="75" x2="462" y2="75"/><line class="gridline" x1="42" y1="120" x2="462" y2="120"/><line class="gridline" x1="42" y1="165" x2="462" y2="165"/>
+      <text class="axis" x="7" y="34">4 ลิตร</text><text class="axis" x="7" y="79">3 ลิตร</text><text class="axis" x="7" y="124">2 ลิตร</text><text class="axis" x="7" y="169">1 ลิตร</text>
+      <polyline class="line" stroke="#16a6a1" points="52,129 119,97 186,129 253,142 320,97 387,52 454,129"/>
+      <g fill="#16a6a1"><circle class="point" cx="52" cy="129" r="5"/><circle class="point" cx="119" cy="97" r="5"/><circle class="point" cx="186" cy="129" r="5"/><circle class="point" cx="253" cy="142" r="5"/><circle class="point" cx="320" cy="97" r="5"/><circle class="point" cx="387" cy="52" r="5"/><circle class="point" cx="454" cy="129" r="5"/></g>
+      <g class="axis" text-anchor="middle"><text x="52" y="195">9 พ.ย.</text><text x="119" y="195">10 พ.ย.</text><text x="186" y="195">11 พ.ย.</text><text x="253" y="195">12 พ.ย.</text><text x="320" y="195">13 พ.ย.</text><text x="387" y="195">14 พ.ย.</text><text x="454" y="195">15 พ.ย.</text></g>
+    </svg>
+  </article>
+</section>
+
+<section class="card daily">
+  <h2 class="section-title">กิจกรรมรายวัน</h2><p class="section-sub">บันทึกการออกกำลังกาย การนอน และน้ำดื่ม</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>วันที่</th><th>กิจกรรม</th><th>เวลา</th><th>การนอน</th><th>น้ำดื่ม</th></tr></thead>
+    <tbody>
+      <tr><td class="day">9 พ.ย. · จ.</td><td><span class="activity">วิ่ง</span></td><td>30 นาที</td><td>7.2 ชม.</td><td>1.8 ลิตร</td></tr>
+      <tr><td class="day">10 พ.ย. · อ.</td><td><span class="activity">ปั่นจักรยาน</span></td><td>45 นาที</td><td>6.5 ชม.</td><td>2.5 ลิตร</td></tr>
+      <tr><td class="day">11 พ.ย. · พ.</td><td><span class="activity rest">พัก</span></td><td>—</td><td>7.2 ชม.</td><td>1.8 ลิตร</td></tr>
+      <tr><td class="day">12 พ.ย. · พฤ.</td><td><span class="activity rest">พัก</span></td><td>—</td><td>8.5 ชม.</td><td>1.5 ลิตร</td></tr>
+      <tr><td class="day">13 พ.ย. · ศ.</td><td><span class="activity">ปั่นจักรยาน</span></td><td>45 นาที</td><td>6.5 ชม.</td><td>2.5 ลิตร</td></tr>
+      <tr><td class="day">14 พ.ย. · ส.</td><td><span class="activity rest">พัก</span></td><td>—</td><td>8.5 ชม.</td><td>3.5 ลิตร</td></tr>
+      <tr><td class="day">15 พ.ย. · อา.</td><td><span class="activity">วิ่ง</span></td><td>15 นาที</td><td>7.2 ชม.</td><td>1.8 ลิตร</td></tr>
+    </tbody>
+  </table></div>
+  <div class="footer">หมายเหตุ: ค่าเฉลี่ยคำนวณจากข้อมูลทั้ง 7 วัน และปัดเศษเป็นทศนิยม 1 ตำแหน่ง · น้ำหนัก 49 กก. เป็นค่าที่ผู้ใช้บันทึก ไม่ได้นำมาใช้ตัดสินภาวะสุขภาพ</div>
+</section>
+</div>
+</body>
+</html>
